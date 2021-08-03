@@ -20,6 +20,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+<<<<<<< HEAD
 import org.springframework.test.web.servlet.MockMvc;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -43,6 +44,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @ExtendWith(SpringExtension.class)//junit5 suport extension interface hrough which classes can integrate with the JUnit test.
 @AutoConfigureMockMvc/*allow test only http incoming request layer without start the serve, 
         but starting the full spring application context*/
+=======
+@RunWith(SpringRunner.class)
+//@SpringBootTest
+>>>>>>> bfdbe385447aade5be71ca731bd02e8b7a436642
 public class BasicApplicationTests {
   
     @Autowired
@@ -83,6 +88,7 @@ public class BasicApplicationTests {
         ).andDo(print()).andExpect(status().isOk());
     }
 
+<<<<<<< HEAD
     /**
      * Test call of create method, on weblayer.
      */
@@ -103,5 +109,10 @@ public class BasicApplicationTests {
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.invoiceId").value(1));
     }
+=======
+	@Test
+	public void contextLoads() {
+	}
+>>>>>>> bfdbe385447aade5be71ca731bd02e8b7a436642
 
 }
